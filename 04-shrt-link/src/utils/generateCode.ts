@@ -1,0 +1,1 @@
+// Generador de códigos cortos

@@ -1,0 +1,1 @@
+// Configuración CLI de Sanity

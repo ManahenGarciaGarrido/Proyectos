@@ -1,0 +1,6 @@
+# Especificación OpenAPI 3.0 para Shrt.link API
+openapi: 3.0.0
+info:
+  title: Shrt.link API
+  description: API REST para acortamiento de URLs con analytics
+  version: 0.1.0

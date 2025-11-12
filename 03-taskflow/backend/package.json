@@ -1,0 +1,16 @@
+{
+  "name": "taskflow-backend",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "jest",
+    "lint": "eslint . --ext .ts"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
