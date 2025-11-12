@@ -1,12 +1,12 @@
 export default function Header() {
   return (
-    <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
-      <div className="container mx-auto px-4 py-6">
+    <header className="bg-white border-b border-gray-200">
+      <div className="container mx-auto px-4 py-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
+            <div className="rounded-lg p-2 bg-gray-50 border border-gray-200">
               <svg
-                className="w-8 h-8"
+                className="w-7 h-7 text-gray-700"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -20,13 +20,13 @@ export default function Header() {
               </svg>
             </div>
             <div>
-              <h1 className="text-2xl font-bold">CodeExplainer</h1>
-              <p className="text-sm text-blue-100">AI-Powered Code Analysis</p>
+              <h1 className="text-2xl font-semibold text-gray-900">CodeExplainer</h1>
+              <p className="text-sm text-gray-500">AI-Powered Code Analysis</p>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2">
-              <p className="text-sm">Powered by Google Gemini</p>
+            <div className="rounded-lg px-4 py-2 bg-gray-50 border border-gray-200">
+              <p className="text-sm text-gray-600">Powered by Google Gemini</p>
             </div>
           </div>
         </div>
