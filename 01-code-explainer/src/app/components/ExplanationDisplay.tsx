@@ -13,10 +13,10 @@ export default function ExplanationDisplay({ explanation, error }: ExplanationDi
   if (error) {
     return (
       <div className="w-full max-w-4xl mx-auto mt-8">
-        <div className="bg-red-50 border-l-4 border-red-500 rounded-lg p-6">
+        <div className="bg-red-50 border border-red-200 rounded-lg p-6">
           <div className="flex items-start">
             <svg
-              className="w-6 h-6 text-red-500 mr-3 flex-shrink-0"
+              className="w-6 h-6 text-red-600 mr-3 flex-shrink-0"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -29,8 +29,8 @@ export default function ExplanationDisplay({ explanation, error }: ExplanationDi
               />
             </svg>
             <div>
-              <h3 className="text-lg font-semibold text-red-800 mb-1">Error</h3>
-              <p className="text-red-700">{error}</p>
+              <h3 className="text-lg font-semibold text-red-900 mb-1">Error</h3>
+              <p className="text-red-800">{error}</p>
             </div>
           </div>
         </div>
@@ -44,11 +44,11 @@ export default function ExplanationDisplay({ explanation, error }: ExplanationDi
 
   return (
     <div className="w-full max-w-4xl mx-auto mt-8 animate-fade-in">
-      <div className="bg-white rounded-lg shadow-lg p-6">
+      <div className="bg-white rounded-lg border border-gray-200 p-6">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-gray-800 flex items-center">
+          <h2 className="text-2xl font-semibold text-gray-800 flex items-center">
             <svg
-              className="w-7 h-7 mr-2 text-blue-600"
+              className="w-7 h-7 mr-2 text-gray-700"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -129,7 +129,7 @@ export default function ExplanationDisplay({ explanation, error }: ExplanationDi
                 <strong className="font-semibold text-gray-900" {...props} />
               ),
               blockquote: ({ node, ...props }) => (
-                <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-600 my-4" {...props} />
+                <blockquote className="border-l-4 border-gray-400 pl-4 italic text-gray-600 my-4" {...props} />
               ),
             }}
           >

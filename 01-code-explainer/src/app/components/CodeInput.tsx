@@ -75,7 +75,7 @@ export default function CodeInput({ onExplain, isLoading }: CodeInputProps) {
   return (
     <div className="w-full max-w-4xl mx-auto">
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="bg-white rounded-lg shadow-lg p-6">
+        <div className="bg-white rounded-lg border border-gray-200 p-6">
           <div className="flex items-center justify-between mb-4">
             <label htmlFor="code-input" className="text-lg font-semibold text-gray-700">
               Paste Your Code
@@ -84,7 +84,7 @@ export default function CodeInput({ onExplain, isLoading }: CodeInputProps) {
               <select
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
-                className="px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent"
               >
                 <option value="javascript">JavaScript</option>
                 <option value="python">Python</option>
@@ -113,7 +113,7 @@ export default function CodeInput({ onExplain, isLoading }: CodeInputProps) {
             value={code}
             onChange={(e) => setCode(e.target.value)}
             placeholder="Paste your code here..."
-            className="w-full h-64 p-4 font-mono text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+            className="w-full h-64 p-4 font-mono text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent resize-none"
             disabled={isLoading}
           />
 
@@ -124,7 +124,7 @@ export default function CodeInput({ onExplain, isLoading }: CodeInputProps) {
             <button
               type="submit"
               disabled={!code.trim() || isLoading}
-              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+              className="px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {isLoading ? (
                 <span className="flex items-center space-x-2">
@@ -162,12 +162,12 @@ export default function CodeInput({ onExplain, isLoading }: CodeInputProps) {
             <button
               key={index}
               onClick={() => loadExample(example.code, example.language)}
-              className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow text-left border-2 border-transparent hover:border-blue-500"
+              className="p-4 bg-white rounded-lg border border-gray-200 hover:border-gray-400 transition-colors text-left"
               disabled={isLoading}
             >
               <div className="flex items-center justify-between mb-2">
                 <span className="font-semibold text-gray-800">{example.title}</span>
-                <span className="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded">
+                <span className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded">
                   {example.language}
                 </span>
               </div>

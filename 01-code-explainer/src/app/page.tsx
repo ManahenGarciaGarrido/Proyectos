@@ -40,13 +40,13 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gray-50">
       <Header />
 
       <main className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-4">
             Understand Code Instantly with AI
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -64,14 +64,14 @@ export default function Home() {
         {/* Features Section */}
         {!explanation && !isLoading && (
           <div className="max-w-4xl mx-auto mt-16">
-            <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-8 text-center">
               How It Works
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+              <div className="bg-white rounded-lg p-6 border border-gray-200">
+                <div className="bg-gray-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <svg
-                    className="w-6 h-6 text-blue-600"
+                    className="w-6 h-6 text-gray-700"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -90,10 +90,10 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+              <div className="bg-white rounded-lg p-6 border border-gray-200">
+                <div className="bg-gray-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <svg
-                    className="w-6 h-6 text-purple-600"
+                    className="w-6 h-6 text-gray-700"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -112,10 +112,10 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-md">
-                <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+              <div className="bg-white rounded-lg p-6 border border-gray-200">
+                <div className="bg-gray-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <svg
-                    className="w-6 h-6 text-green-600"
+                    className="w-6 h-6 text-gray-700"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
