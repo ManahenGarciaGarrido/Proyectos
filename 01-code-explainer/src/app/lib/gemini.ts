@@ -10,7 +10,7 @@ const genAI = new GoogleGenerativeAI(apiKey);
 
 export async function explainCode(code: string, language?: string): Promise<string> {
   try {
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
     const prompt = `You are an expert code explainer. Analyze the following ${language || 'code'} and provide a clear, detailed explanation:
 
