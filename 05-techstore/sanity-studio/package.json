@@ -1,0 +1,14 @@
+{
+  "name": "techstore-sanity-studio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

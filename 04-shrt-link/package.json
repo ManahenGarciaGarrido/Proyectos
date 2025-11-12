@@ -1,0 +1,19 @@
+{
+  "name": "shrt-link",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint . --ext .ts",
+    "prisma:studio": "prisma studio"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
