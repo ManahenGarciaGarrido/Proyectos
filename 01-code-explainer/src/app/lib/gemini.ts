@@ -17,7 +17,7 @@ export async function explainCode(code: string, language?: string): Promise<stri
 
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     try {
-      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+      const model = genAI.getGenerativeModel({ model: 'gemini-2.5-flash' });
 
       const prompt = `You are an expert code explainer. Analyze the following ${language || 'code'} and provide a clear, detailed explanation:
 
