@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import CryptoList from './components/CryptoList';
+import CryptoDetail from './components/CryptoDetail';
 import { useCryptoList } from './hooks/useCryptoData';
 import type { Crypto } from './types';
 
@@ -17,6 +18,7 @@ const queryClient = new QueryClient({
 
 function CryptoTrackerApp() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCrypto, setSelectedCrypto] = useState<Crypto | null>(null);
   const { data: cryptos = [], isLoading, error } = useCryptoList(50);
 
   // Filter cryptos by search query
@@ -30,8 +32,11 @@ function CryptoTrackerApp() {
   });
 
   const handleCryptoClick = (crypto: Crypto) => {
-    console.log('Clicked crypto:', crypto.name);
-    // Future: Navigate to detail view or open modal
+    setSelectedCrypto(crypto);
+  };
+
+  const handleCloseDetail = () => {
+    setSelectedCrypto(null);
   };
 
   return (
@@ -71,6 +76,11 @@ function CryptoTrackerApp() {
           </div>
         )}
       </main>
+
+      {/* Crypto Detail Modal */}
+      {selectedCrypto && (
+        <CryptoDetail crypto={selectedCrypto} onClose={handleCloseDetail} />
+      )}
     </div>
   );
 }
